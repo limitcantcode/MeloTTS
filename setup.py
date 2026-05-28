@@ -16,6 +16,6 @@ setup(
     include_package_data=True,
     install_requires=reqs,
     package_data={
-        "": ["*.txt", "*.json"],
+        "": ["*.txt", "*.json", "cmudict.rep", "cmudict_*"],
     },
 )
