@@ -2,7 +2,6 @@ import collections
 import re
 from enum import Enum
 
-import six
 
 _DEF_PUNCS = ';:,.!?¡¿—…"«»“”'
 
@@ -54,7 +53,7 @@ class Punctuation:
 
     @puncs.setter
     def puncs(self, value):
-        if not isinstance(value, six.string_types):
+        if not isinstance(value, str):
             raise ValueError("[!] Punctuations must be of type str.")
         self._puncs = "".join(list(dict.fromkeys(list(value))))  # remove duplicates without changing the oreder
         self.puncs_regular_exp = re.compile(rf"(\s*[{re.escape(self._puncs)}]+\s*)+")

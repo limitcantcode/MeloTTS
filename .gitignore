@@ -1,3 +1,7 @@
+test.py
+*.wav
+
+.venv/
 __pycache__/
 .ipynb_checkpoints/
 basetts_outputs_use_bert/
@@ -9,3 +13,4 @@ build/
 
 *.zip
 *.wav
+outputs/
